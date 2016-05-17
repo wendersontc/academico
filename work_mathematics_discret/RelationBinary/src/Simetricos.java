@@ -1,5 +1,5 @@
 
-public class Simetricos {
+public class Simetricos implements Comparable<Simetricos>{
 	
 	public Integer A;
 	public Integer B;
@@ -15,6 +15,12 @@ public class Simetricos {
 	}
 	public void setB(Integer b) {
 		B = b;
+	}
+	@Override
+	public int compareTo(Simetricos o) {
+		if(o.getA() != getA())
+			return Integer.compare(o.getA(), getA());
+		return Integer.compare(o.getB(), getB());
 	}
 
 }
