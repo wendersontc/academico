@@ -29,7 +29,7 @@ public class Main {
 		Main n = new Main();
 		n.InsertionArray();
 		n.PrintArray();
-		n.IsSimetric();
+		//n.IsSimetric();
 		// n.PrintArray();
 		if (n.IsSimetric() > 0) {
 			System.out.println(" nao simetrico : " + 0);
@@ -136,8 +136,8 @@ public class Main {
 
 	public void PrintNotSimetric() {
 		for (int i = colectionNotSimetrics.size() -1; i > -1; i--) {
-			System.out.println(colectionNotSimetrics.get(i).A + ","
-					+ colectionNotSimetrics.get(i).B + "\n");
+			System.out.println("{"+colectionNotSimetrics.get(i).A + ","
+					+ colectionNotSimetrics.get(i).B + "}");
 		}
 	}
 
@@ -177,8 +177,8 @@ public class Main {
 
 	public void PrintArray() {
 		for (int i = 0; i < colectionPars.size(); i++) {
-			System.out.println(" v :" + colectionPars.get(i).A + ","
-					+ colectionPars.get(i).B);
+			System.out.println(" {" + colectionPars.get(i).A + ","
+					+ colectionPars.get(i).B + "}");
 		}
 	}
 
