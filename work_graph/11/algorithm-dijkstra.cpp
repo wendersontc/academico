@@ -1,9 +1,3 @@
-/**
- *  Author           -> Adrian Statescu <mergesortv@gmail.com> <http://thinkphp.ro>
- *  Operating System -> Ubuntu
- *  Environments     -> Wim
- *  Compile          -> g++ -std=c++11 algorithm-dijkstra.cpp -o dij
- */
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -29,7 +23,7 @@ void readData() {
 
      int x,
          y,
-         cost; 
+         cost;
 
      ifstream fin(FIN);
 
@@ -37,10 +31,10 @@ void readData() {
 
      while(edges--){
            fin>>x>>y>>cost;
-           Graph[ x ].push_back({y,cost}); 
+           Graph[ x ].push_back({y,cost});
      }
 
-     fin.close();  
+     fin.close();
 };
 
 void Dijkstra() {
@@ -69,12 +63,12 @@ void Dijkstra() {
 
                    if(!inQueue[ it.first ]) {
 
-                       Queue.push( it.first );  
+                       Queue.push( it.first );
 
                        inQueue[ it.first ] = true;
                    }
                 }
-            } 
+            }
      }
 };
 
@@ -83,9 +77,9 @@ void writeData() {
 
      ofstream fout(FOUT);
 
-     for(int i = 2; i <= nodes; i++) 
+     for(int i = 2; i <= nodes; i++)
 
-         (distMin[ i ] < oo) ? fout<<distMin[ i ]<<" " : fout<<0<<" "; 
+         (distMin[ i ] < oo) ? fout<<distMin[ i ]<<" " : fout<<0<<" ";
 
      fout.close();
 };
@@ -97,5 +91,5 @@ int main() {
  Dijkstra();
  writeData();
 
- return(0);   
+ return(0);
 };
